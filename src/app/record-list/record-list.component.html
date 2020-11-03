@@ -1,0 +1,38 @@
+<!-- <h3>Festival List</h3>
+<ul>
+    <li *ngFor="let festival of festivals">
+      <p>
+          {{festival.name}}
+      </p>
+      <ul *ngIf="festival.bands.length>0">
+        <ng-container
+       *ngFor="let band of festival.bands"
+      >
+      <li>Band: {{band.name}}
+          Record: {{band.recordLabel}}
+      </li>
+            
+      
+    </ng-container>
+      </ul>
+    </li>
+  </ul> -->
+
+<h3>Record List</h3>
+<ul>
+    <li *ngFor="let record of records">
+      <p>
+        &lt;&lt;{{ record.name }}&gt;&gt;
+      </p>
+      <ul *ngIf="record.band.length>0">
+        <ng-container
+       *ngFor="let band of record.band"
+        >
+      <li>Band: {{band.name}}
+          <ul *ngFor="let f of band.festival">
+            <li *ngIf="f!=null">{{f}} <span >Festival</span></li></ul>
+      </li>
+    </ng-container>
+      </ul>
+    </li>
+  </ul>
