@@ -11,8 +11,13 @@
   "include": [
     "src/**/*.ts"
   ],
+// disable Ivy
+//   "angularCompilerOptions": {
+//     "enableIvy": false
+// },
   "exclude": [
     "src/test.ts",
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/environment/*.prod.ts"
   ]
 }
